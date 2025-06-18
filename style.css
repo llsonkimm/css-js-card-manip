@@ -1,0 +1,112 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    font-family: sans-serif;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-color: rgb(4, 23, 36);
+    place-items: centre;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
+    /* place-items: centre; */
+
+}
+
+
+.section .card {
+    background-image: url(images/codex.jpg);
+    /* background-position: center center; */
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    padding: 10rem 0 0;
+    max-width: 35ch;
+    line-height: 1.2;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+
+.section .card-content {
+    --padding: 1.5rem;
+    padding: var(--padding);
+    background: linear-gradient(hsl(0 0% 0% /0),
+            hsl(20 0% 0% /.1) 10%,
+            hsl(0 0% 0% /1));
+}
+
+.section .card-header,
+.section .card-info {
+    margin-bottom: 1rem;
+}
+
+.section .card-header {
+
+    width: max-content;
+    position: relative;
+    /* display: inline-block; */
+}
+
+.section .card-header::after {
+    content: '';
+    /* inset: -1px 0 50px 0; */
+    left: calc(var(--padding) * -1);
+    bottom: 0;
+    transform-origin: bottom;
+    position: absolute;
+    width: calc(100% + var(--padding));
+    height: 3px;
+    background: #d6da06;
+
+}
+
+.section .card-content .button {
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    background-color: #97c518;
+    padding: .5em 1.25em;
+}
+
+.section .card-content .button:hover,
+.section .card-content .button:focus {
+    background-color: #dedfd2;
+}
+
+
+
+
+
+
+
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-inline: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+.card .title {
+    margin-bottom: 2rem;
+}
+
+.card .key {
+    border: 1px solid #ddd;
+    display: inline-block;
+    align-items: center;
+    padding: 5px 10px;
+    font-size: 2rem;
+}
