@@ -75,6 +75,7 @@ body {
     color: black;
     background-color: #97c518;
     padding: .5em 1.25em;
+    border-radius: 1rem;
 }
 
 .section .card-content .button:hover,
