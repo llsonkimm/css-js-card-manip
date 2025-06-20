@@ -68,31 +68,20 @@
 // keyed.addEventListener('key', onKey);
 
 
-
 let intervalID;
 
-function startChange() {
+function startChange(){
     if (!intervalID) {
-        intervalID = setInterval(colorChange, 1000);
-    }
-    
-}
-
-function colorChange() {
-    if (document.body.style.backgroundColor !=='black') {
-        document.body.style.backgroundColor = 'black';
-        // document.body.style.color = 'white';
-    } else {
-        document.body.style.backgroundColor = 'white';
-        // document.body.style.color = 'black';
+        intervalID = setInterval((colorChange) => {
+            if (document.body.backgroundColor !== 'black'){
+                document.body.backgroundColor = 'black'
+            } else {
+                document.body.backgroundColor = 'white'
+            }
+            
+        }, 1000);
     }
 }
-
-
-// function changeRandomColor() {
-//     const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-//     document.body.style.backgroundColor = `#${randomColor}`;
-// }
 
 function stopChange(){
     clearInterval(intervalID);
