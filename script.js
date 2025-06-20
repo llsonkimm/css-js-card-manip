@@ -73,7 +73,7 @@ let intervalID;
 
 function colorChange() {
     if (!intervalID) {
-        intervalID = setInterval(startChange, 1000);
+        intervalID = setInterval(changeRandomColor, 1000);
     }
     
 }
@@ -86,6 +86,12 @@ function startChange() {
         document.body.style.backgroundColor = 'white';
         // document.body.style.color = 'black';
     }
+}
+
+
+function changeRandomColor() {
+    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    document.body.style.backgroundColor = `#${randomColor}`;
 }
 
 function stopChange(){
