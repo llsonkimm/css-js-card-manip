@@ -72,7 +72,7 @@ let intervalID;
 
 function startChange(){
     if (!intervalID) {
-        intervalID = setInterval(colorChange, 1000);
+        intervalID = setInterval(randomColorChange, 1000);
     }
     
 }
