@@ -73,18 +73,18 @@ let intervalID;
 
 function colorChange() {
     if (!intervalID) {
-        intervalID = setInterval(startChange, 1000)
+        intervalID = setInterval(startChange, 1000);
     }
     
 }
 
 function startChange() {
-    if (document.body.style.backgroundColor !=='rgb(4, 23, 36)') {
-        document.body.style.backgroundColor = 'rgb(4, 23, 36)';
-        document.body.style.color = 'rgb(222, 228, 233)';
+    if (document.body.style.backgroundColor !=='black') {
+        document.body.style.backgroundColor = 'black';
+        document.body.style.color = 'white';
     } else {
-        document.body.style.backgroundColor = 'rgb(5, 51, 36)';
-        document.body.style.color = 'rgb(149, 194, 231)';
+        document.body.style.backgroundColor = 'white';
+        document.body.style.color = 'black';
     }
 }
 
