@@ -78,10 +78,10 @@ function startChange(){
 }
 
 function colorChange (){
-            if (document.body.backgroundColor !== 'black'){
-                document.body.backgroundColor = 'black'
+            if (document.body.style.backgroundColor !== 'black'){
+                document.body.style.backgroundColor = 'black'
             } else {
-                document.body.backgroundColor = 'white'
+                document.body.style.backgroundColor = 'white'
             }
             
 }
