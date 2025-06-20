@@ -81,16 +81,16 @@ function colorChange() {
 function startChange() {
     if (document.body.style.backgroundColor !=='black') {
         document.body.style.backgroundColor = 'black';
-        document.body.style.color = 'white';
+        // document.body.style.color = 'white';
     } else {
         document.body.style.backgroundColor = 'white';
-        document.body.style.color = 'black';
+        // document.body.style.color = 'black';
     }
 }
 
-// function stopChange(){
-//     clearInterval(intervalID);
-// }
+function stopChange(){
+    clearInterval(intervalID);
+}
 
 document.getElementById('btn').addEventListener('click', startChange);
-// document.getElementById('btn').addEventListener('click', stopChange);
+document.getElementById('btn').addEventListener('click', stopChange);
