@@ -74,7 +74,10 @@ function startChange(){
     if (!intervalID) {
         intervalID = setInterval(colorChange, 1000);
     }
-    function colorChange (){
+    
+}
+
+function colorChange (){
             if (document.body.backgroundColor !== 'black'){
                 document.body.backgroundColor = 'black'
             } else {
@@ -82,8 +85,6 @@ function startChange(){
             }
             
 }
-}
-
 
 function stopChange(){
     clearInterval(intervalID);
