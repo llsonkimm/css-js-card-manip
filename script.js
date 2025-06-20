@@ -38,26 +38,26 @@
 // logo.addEventListener('click', onClick3);
 // logo.addEventListener('drag', onDrag);
 
-window.addEventListener('keydown', (e) => {
-    const keyed = document.getElementById('container');
+// window.addEventListener('keydown', (e) => {
+//     const keyed = document.getElementById('container');
     // const keyCode = document.querySelector('keycode');
     // const codes = document.querySelector('code');
 
-    keyed.innerHTML = 
-         `<div class="card">
-            <h3 class="title">e.key</h3>
-            ${e.key === ' ' ? 'space' : e.key}
-        </div>
-        <div class="card">
-            <h3 class="title">e.keyCode</h3>
-            ${e.keyCode}
-        </div>
-        <div class="card">
-            <h3 class="title">e.code</h3>
-            ${e.code}
-        </div>`;
+//     keyed.innerHTML = 
+//          `<div class="card">
+//             <h3 class="title">e.key</h3>
+//             ${e.key === ' ' ? 'space' : e.key}
+//         </div>
+//         <div class="card">
+//             <h3 class="title">e.keyCode</h3>
+//             ${e.keyCode}
+//         </div>
+//         <div class="card">
+//             <h3 class="title">e.code</h3>
+//             ${e.code}
+//         </div>`;
     
-});
+// });
 
 
 
