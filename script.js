@@ -77,14 +77,21 @@ function startChange(){
     
 }
 
-function colorChange (){
-            if (document.body.style.backgroundColor !== 'black'){
-                document.body.style.backgroundColor = 'black'
-            } else {
-                document.body.style.backgroundColor = 'white'
-            }
-            
+
+function randomColorChange() {
+    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    document.body.style.backgroundColor = `#${randomColor}`;
 }
+
+
+// function colorChange (){
+//             if (document.body.style.backgroundColor !== 'black'){
+//                 document.body.style.backgroundColor = 'black'
+//             } else {
+//                 document.body.style.backgroundColor = 'white'
+//             }
+            
+// }
 
 function stopChange(){
     clearInterval(intervalID);
