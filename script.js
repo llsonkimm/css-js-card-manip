@@ -73,7 +73,7 @@ let intervalID;
 
 function colorChange() {
     if (!intervalID) {
-        intervalID = setInterval(startChange, 1000);
+        intervalID = setInterval(startChange, 100);
     }
     
 }
