@@ -72,16 +72,18 @@ let intervalID;
 
 function startChange(){
     if (!intervalID) {
-        intervalID = setInterval((colorChange) => {
+        intervalID = setInterval(colorChange, 1000);
+    }
+    function colorChange (){
             if (document.body.backgroundColor !== 'black'){
                 document.body.backgroundColor = 'black'
             } else {
                 document.body.backgroundColor = 'white'
             }
             
-        }, 1000);
-    }
 }
+}
+
 
 function stopChange(){
     clearInterval(intervalID);
