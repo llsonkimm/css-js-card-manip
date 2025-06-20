@@ -80,11 +80,11 @@ function colorChange() {
 
 function startChange() {
     if (document.body.style.backgroundColor !=='rgb(4, 23, 36)') {
-        document.body.style.backgroundColor === 'rgb(4, 23, 36)';
-        document.body.style.color === 'rgb(222, 228, 233)';
+        document.body.style.backgroundColor = 'rgb(4, 23, 36)';
+        document.body.style.color = 'rgb(222, 228, 233)';
     } else {
-        document.body.style.backgroundColor === 'rgb(5, 51, 36)';
-        document.body.style.color === 'rgb(149, 194, 231)';
+        document.body.style.backgroundColor = 'rgb(5, 51, 36)';
+        document.body.style.color = 'rgb(149, 194, 231)';
     }
 }
 
@@ -93,4 +93,4 @@ function stopChange(){
 }
 
 document.getElementById('btn').addEventListener('click', startChange);
-document.getElementById('btn').addEventListener('click', stopChange);
+// document.getElementById('btn').addEventListener('click', stopChange);
