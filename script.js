@@ -92,5 +92,5 @@ function startChange() {
 //     clearInterval(intervalID);
 // }
 
-// document.getElementById('btn').addEventListener('click', startChange);
+document.getElementById('btn').addEventListener('click', startChange);
 // document.getElementById('btn').addEventListener('click', stopChange);
