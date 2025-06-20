@@ -88,9 +88,9 @@ function startChange() {
     }
 }
 
-function stopChange(){
-    clearInterval(intervalID);
-}
+// function stopChange(){
+//     clearInterval(intervalID);
+// }
 
 document.getElementById('btn').addEventListener('click', startChange);
 // document.getElementById('btn').addEventListener('click', stopChange);
