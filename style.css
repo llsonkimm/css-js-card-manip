@@ -12,6 +12,7 @@ body {
     min-height: 100vh;
     min-height: 100dvh;
     background-color: rgb(4, 23, 36);
+    background-color: white;
     place-items: centre;
     align-items: center;
     justify-content: center;
