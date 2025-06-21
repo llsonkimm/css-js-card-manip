@@ -79,7 +79,7 @@ body {
     background: #d6da06;
     transform: scaleX(0);
     transform-origin: left;
-    /* transition: trasform 500ms ease; */
+    transition: trasform 500ms ease;
 }
 
 .card:hover .card-header::after {
