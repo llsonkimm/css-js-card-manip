@@ -85,7 +85,7 @@ body {
     background: #d6da06;
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 500ms ease;
+    transition: transform 1000ms ease;
 }
 
 .card:hover .card-header::after {
