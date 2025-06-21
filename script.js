@@ -85,8 +85,8 @@ function randomColorChange() {
 
 
 function colorChange (){
-            if (document.body.style.backgroundColor !== 'black'){
-                document.body.style.backgroundColor = 'black'
+            if (document.body.style.backgroundColor !== 'rgb(4, 23, 36)'){
+                document.body.style.backgroundColor = 'rgb(4, 23, 36)'
             } else {
                 document.body.style.backgroundColor = 'white'
             }
