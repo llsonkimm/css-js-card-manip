@@ -54,6 +54,7 @@ body {
             hsl(20 0% 0% /.1) 10%,
             hsl(0 0% 0% /1));
     transform: translateY(70%);
+    transition: transform 500ms ease;
 }
 
 .card:hover .card-content {
