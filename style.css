@@ -28,6 +28,17 @@ body {
     list-style: none;
 }
 
+.card-header,
+.card-info {
+    margin-bottom: 1rem;
+}
+
+.card-header {
+
+    width: max-content;
+    position: relative;
+
+}
 
 .card {
     background-image: url(images/codex.jpg);
@@ -59,27 +70,16 @@ body {
 
 .card:hover .card-content {
     transform: translateY(0);
+    transition-delay: 500ms;
 }
 
 .card-content>*:not(.card-header) {
     opacity: 0;
-    transition: opacity 500ms ease;
+    transition: opacity 500ms linear;
 }
 
 .card:hover .card-content>*:not(.card-header) {
     opacity: 1;
-}
-
-.card-header,
-.card-info {
-    margin-bottom: 1rem;
-}
-
-.card-header {
-
-    width: max-content;
-    position: relative;
-
 }
 
 .card-header::after {
