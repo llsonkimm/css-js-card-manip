@@ -113,7 +113,7 @@ xhr.onreadystatechange = function () {
         data.forEach(repo => {
             const li = document.createElement('li');
             li.innerHTML = `<strong>${repo.name} - ${repo.description}</strong>`;
-            document.querySelector('.about').appendChild(li);
+            document.querySelector('#about').appendChild(li);
         });
     }
 }
