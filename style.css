@@ -64,7 +64,7 @@ body {
 
     width: max-content;
     position: relative;
-    /* display: inline-block; */
+    transition: trasform 500ms ease;
 }
 
 .section .card-header::after {
@@ -78,7 +78,6 @@ body {
     height: 3px;
     background: #d6da06;
     transform: scaleX(0);
-    transition: trasform 500ms ease;
 }
 
 .section .card:hover .card-header::after {
