@@ -127,7 +127,7 @@ let jokes = new XMLHttpRequest();
 jokes.open('GET', 'https://api.chucknorries.io/jokes/random');
 
 
-jokes.onreadystatechange = function () {
+jokes.onreadystatechange = function (e) {
     if (this.readyState === 4 && this.status === 200) {
         const joke = JSON.parse(this.responseText);
 
@@ -138,5 +138,8 @@ jokes.onreadystatechange = function () {
         })
     }
 }
+
+document.getElementById('button').addEventListener('click', e.target)
+
 
 jokes.send();
