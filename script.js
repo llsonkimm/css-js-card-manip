@@ -120,7 +120,7 @@ xhr.onreadystatechange = function () {
 
 
 
-xhr.send();
+// xhr.send();
 
 let jokes = new XMLHttpRequest();
 
