@@ -102,7 +102,7 @@
 
 
 const xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://api.github.com/users/llsonkimm/repos');
+// xhr.open('GET', 'https://api.github.com/users/llsonkimm/repos');
 
 
 
@@ -124,7 +124,7 @@ xhr.onreadystatechange = function () {
 
 let jokes = new XMLHttpRequest();
 
-jokes.open('GET', 'https://api.chucknorriesio/jokes/random');
+jokes.open('GET', 'https://api.chucknorries.io/jokes/random');
 
 
 jokes.onreadystatechange = function () {
