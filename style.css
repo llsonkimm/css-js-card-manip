@@ -77,7 +77,12 @@ body {
     width: calc(100% + var(--padding));
     height: 3px;
     background: #d6da06;
+    transform: scaleX(0);
+    transition: trasform 500ms ease;
+}
 
+.section .card:hover .card-header::after {
+    transform: scaleX(1);
 }
 
 .section .card-content .button {
