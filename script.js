@@ -101,45 +101,52 @@
 // document.getElementById('stop').addEventListener('click', stopChange);
 
 
-const xhr = new XMLHttpRequest();
+// const xhr = new XMLHttpRequest();
 // xhr.open('GET', 'https://api.github.com/users/llsonkimm/repos');
 
 
 
-xhr.onreadystatechange = function () {
-    if (this.readyState === 4 && this.status === 200) {
-        const data = JSON.parse(this.responseText);
+// xhr.onreadystatechange = function () {
+//     if (this.readyState === 4 && this.status === 200) {
+//         const data = JSON.parse(this.responseText);
 
-        data.forEach(repo => {
-            const li = document.createElement('li');
-            li.innerHTML = `<strong>${repo.name} </strong> - ${repo.description}`;
-            document.querySelector('#about').appendChild(li);
-        });
-    }
-};
+//         data.forEach(repo => {
+//             const li = document.createElement('li');
+//             li.innerHTML = `<strong>${repo.name} </strong> - ${repo.description}`;
+//             document.querySelector('#about').appendChild(li);
+//         });
+//     }
+// };
 
 
 
 // xhr.send();
 
-const jokes = new XMLHttpRequest();
+const jokeGenerator = document.getElementById('jokes');
+const jokeBtn = document.getElementById('joke-btn');
 
-jokes.open('GET', 'https://api.chucknorris.io/jokes/random');
+const generateJokes = () =>{
 
+    const xhr = new XMLHttpRequest();
 
-jokes.onreadystatechange = function () {
-    if (this.readyState === 4 && this.status === 200) {
-        const joke = JSON.parse(this.responseText);
+    xhr.open('GET', 'https://api.chucknorris.io/jokes/random');
 
-        joke.forEach(joked => {
-            const p = document.createElement('p');
-            p.innerHTML = `<strong>${joked.value}</strong>`;
-            document.querySelector('#description').appendChild(p);
-        });
+    xhr.onreadystatechange = function () {
+        if (this.readyState === 4) {
+            if (this.status === 200) {
+                jokeGenerator.innerHTML = JSON.parse(this.responseText).value;
+            }
+        } else {
+            jokeGenerator.innerHTML = 'Something went wrong, refresh the page again'
+        }
     }
+
+    xhr.send();
+
 };
 
-// document.getElementById('button').addEventListener('click')
 
 
-jokes.send();
+
+jokeBtn.addEventListener('click', generateJokes);
+// jokeBtn.addEventListener('click', generateJokes);
