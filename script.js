@@ -102,7 +102,7 @@
 
 
 const xhr = XMLHttpRequest;
-xhr.open('GET',)
+xhr.open('GET','https://api.github.com/users/llsonkimm/repos')
 
 
 
@@ -110,9 +110,9 @@ xhr.onreadystatechange = function () {
     if (this.readystate === 4 && this.status === 200) {
         const data = JSON.parse(this.responseText);
 
-        data.forEach(movie => {
+        data.forEach(repo => {
             const li = document.createElement('li');
-            li.innerHTML = `<strong>${movie.title} - ${movie.year}</strong>`;
+            li.innerHTML = `<strong>${repo.name} - ${repo.description}</strong>`;
             document.querySelector('.about').appendChild(li);
         });
     }
