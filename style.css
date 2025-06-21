@@ -29,7 +29,7 @@ body {
 }
 
 
-.section .card {
+.card {
     background-image: url(images/codex.jpg);
     /* background-position: center center; */
     /* background-repeat: no-repeat; */
@@ -43,11 +43,11 @@ body {
     transition: transform 500ms ease;
 }
 
-.section .card:hover {
+.card:hover {
     transform: scale(1.05);
 }
 
-.section .card-content {
+.card-content {
     --padding: 1.5rem;
     padding: var(--padding);
     background: linear-gradient(hsl(0 0% 0% /0),
@@ -55,19 +55,19 @@ body {
             hsl(0 0% 0% /1));
 }
 
-.section .card-header,
-.section .card-info {
+.card-header,
+.card-info {
     margin-bottom: 1rem;
 }
 
-.section .card-header {
+.card-header {
 
     width: max-content;
     position: relative;
 
 }
 
-.section .card-header::after {
+.card-header::after {
     content: '';
     /* inset: -1px 0 50px 0; */
     left: calc(var(--padding) * -1);
@@ -82,11 +82,11 @@ body {
     transition: trasform 500ms ease;
 }
 
-.section .card:hover .card-header::after {
+.card:hover .card-header::after {
     transform: scaleX(1);
 }
 
-.section .card-content .button {
+.card-content .button {
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
@@ -96,8 +96,8 @@ body {
     border-radius: 0.85rem;
 }
 
-.section .card-content .button:hover,
-.section .card-content .button:focus {
+.card-content .button:hover,
+.card-content .button:focus {
     background-color: #dedfd2;
 }
 
