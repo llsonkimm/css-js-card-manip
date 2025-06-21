@@ -116,4 +116,4 @@ xhr.onreadystatechange = function () {
             document.querySelector('#about').appendChild(li);
         });
     }
-}
+};
