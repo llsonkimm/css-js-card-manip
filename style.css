@@ -38,7 +38,7 @@ body {
     padding: 10rem 0 0;
     max-width: 35ch;
     line-height: 1.2;
-    border-radius: 1rem;
+    border-radius: 0.85rem;
     overflow: hidden;
 }
 
@@ -83,7 +83,7 @@ body {
     color: black;
     background-color: #97c518;
     padding: .5em 1.25em;
-    border-radius: 1rem;
+    border-radius: 0.85rem;
 }
 
 .section .card-content .button:hover,
