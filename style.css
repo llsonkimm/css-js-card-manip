@@ -61,6 +61,10 @@ body {
     transform: translateY(0);
 }
 
+.card-content>* {
+    opacity: 0;
+}
+
 .card-header,
 .card-info {
     margin-bottom: 1rem;
