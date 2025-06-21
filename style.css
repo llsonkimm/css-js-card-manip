@@ -40,8 +40,12 @@ body {
     line-height: 1.2;
     border-radius: 0.85rem;
     overflow: hidden;
+    transition: transform 500ms ease;
 }
 
+.section .card:hover {
+    transform: scale(1.05);
+}
 
 .section .card-content {
     --padding: 1.5rem;
