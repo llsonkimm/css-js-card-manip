@@ -22,6 +22,12 @@ body {
 }
 
 
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+
 .section .card {
     background-image: url(images/codex.jpg);
     /* background-position: center center; */
