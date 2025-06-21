@@ -118,4 +118,25 @@ xhr.onreadystatechange = function () {
     }
 };
 
+
+
 xhr.send();
+
+let jokes = new XMLHttpRequest();
+
+jokes.open('GET', 'https://api.chucknorriesio/jokes/random');
+
+
+jokes.onreadystatechange = function () {
+    if (this.readyState === 4 && this.status === 200) {
+        const joke = JSON.parse(this.responseText);
+
+        joke.forEach(joked => {
+            const p = document.createElement('p');
+            p.innerHTML = `<strong>${joked.value}</strong>`;
+            document.querySelector('#description').appendChild(p);
+        })
+    }
+}
+
+jokes.send();
