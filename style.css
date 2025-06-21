@@ -78,7 +78,7 @@ body {
     height: 3px;
     background: #d6da06;
     transform: scaleX(0);
-
+    transform-origin: left;
     transition: trasform 500ms ease;
 }
 
