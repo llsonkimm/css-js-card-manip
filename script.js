@@ -124,7 +124,7 @@ xhr.onreadystatechange = function () {
 
 let jokes = new XMLHttpRequest();
 
-jokes.open('GET', 'https://api.chucknorries.io/jokes/random');
+jokes.open('GET', 'https://api.chucknorris.io/jokes/random');
 
 
 jokes.onreadystatechange = function () {
