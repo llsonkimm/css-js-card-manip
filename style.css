@@ -80,6 +80,7 @@ body {
 
 .card:hover .card-content>*:not(.card-header) {
     opacity: 1;
+    transition-delay: 1000ms;
 }
 
 .card-header::after {
