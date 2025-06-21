@@ -68,20 +68,20 @@
 // keyed.addEventListener('key', onKey);
 
 
-let intervalID;
+// let intervalID;
 
-function startChange(){
-    if (!intervalID) {
-        intervalID = setInterval(randomColorChange, 1000);
-    }
+// function startChange(){
+//     if (!intervalID) {
+//         intervalID = setInterval(randomColorChange, 1000);
+//     }
     
-}
+// }
 
 
-function randomColorChange() {
-    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-    document.body.style.backgroundColor = `#${randomColor}`;
-}
+// function randomColorChange() {
+//     const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+//     document.body.style.backgroundColor = `#${randomColor}`;
+// }
 
 
 // function colorChange (){
@@ -93,9 +93,27 @@ function randomColorChange() {
             
 // }
 
-function stopChange(){
-    clearInterval(intervalID);
-}
+// function stopChange(){
+//     clearInterval(intervalID);
+// }
 
-document.getElementById('start').addEventListener('click', startChange);
-document.getElementById('stop').addEventListener('click', stopChange);
+// document.getElementById('start').addEventListener('click', startChange);
+// document.getElementById('stop').addEventListener('click', stopChange);
+
+
+const xhr = XMLHttpRequest;
+xhr.open('GET',)
+
+
+
+xhr.onreadystatechange = function () {
+    if (this.readystate === 4 && this.status === 200) {
+        const data = JSON.parse(this.responseText);
+
+        data.forEach(movie => {
+            const li = document.createElement('li');
+            li.innerHTML = `<strong>${movie.title} - ${movie.year}</strong>`;
+            document.querySelector('.about').appendChild(li);
+        });
+    }
+}
