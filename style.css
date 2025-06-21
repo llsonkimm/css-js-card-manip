@@ -85,12 +85,11 @@ body {
     background: #d6da06;
     transform: scaleX(0);
     transform-origin: left;
-
+    transition: transform 500ms ease;
 }
 
 .card:hover .card-header::after {
     transform: scaleX(1);
-    transition: trasform 500ms ease;
 }
 
 .card-content .button {
