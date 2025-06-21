@@ -1,126 +1,126 @@
-// const clicker = document.querySelector('.section');
+const clicker = document.querySelector('.section');
 
 
-// // const onClick = () => console.log('click event');
-// const onClick = () => {
-//     if (document.body.style.backgroundColor !== 'black') {
-//         document.body.style.backgroundColor = 'black';
-//         document.body.style.color = 'white';
-//     } else {
-//         document.body.style.backgroundColor = 'white';
-//         document.body.style.color = 'black';
-//    }
-// };
+// const onClick = () => console.log('click event');
+const onClick = () => {
+    if (document.body.style.backgroundColor !== 'black') {
+        document.body.style.backgroundColor = 'black';
+        document.body.style.color = 'white';
+    } else {
+        document.body.style.backgroundColor = 'white';
+        document.body.style.color = 'black';
+   }
+};
 
 
 
 
-// // clicker.addEventListener('click', onClick);
-// // clicker.addEventListener('dblclick', onClick2);
+// clicker.addEventListener('click', onClick);
+// clicker.addEventListener('dblclick', onClick2);
 
 
-// const logo = document.querySelector('img');
+const logo = document.querySelector('img');
 
-// function onClick3(e) {
-//     if (e.target.style.backgroundColor !== 'black') {
-//         e.target.style.backgroundColor = 'black';
-//     } else {
-//         e.target.style.backgroundColor = 'white';
-//     }
-//     // console.log(e.target);
-// }
+function onClick3(e) {
+    if (e.target.style.backgroundColor !== 'black') {
+        e.target.style.backgroundColor = 'black';
+    } else {
+        e.target.style.backgroundColor = 'white';
+    }
+    // console.log(e.target);
+}
 
-// function onDrag(e) {
-//     document.querySelector('h1').textContent = `X ${e.clientX} Y ${e.clientY}`;
-// }
+function onDrag(e) {
+    document.querySelector('h1').textContent = `X ${e.clientX} Y ${e.clientY}`;
+}
 
 
-// logo.addEventListener('click', onClick3);
-// logo.addEventListener('drag', onDrag);
+logo.addEventListener('click', onClick3);
+logo.addEventListener('drag', onDrag);
 
-// window.addEventListener('keydown', (e) => {
-//     const keyed = document.getElementById('container');
-    // const keyCode = document.querySelector('keycode');
-    // const codes = document.querySelector('code');
+window.addEventListener('keydown', (e) => {
+    const keyed = document.getElementById('container');
+    const keyCode = document.querySelector('keycode');
+    const codes = document.querySelector('code');
 
-//     keyed.innerHTML = 
-//          `<div class="card">
-//             <h3 class="title">e.key</h3>
-//             ${e.key === ' ' ? 'space' : e.key}
-//         </div>
-//         <div class="card">
-//             <h3 class="title">e.keyCode</h3>
-//             ${e.keyCode}
-//         </div>
-//         <div class="card">
-//             <h3 class="title">e.code</h3>
-//             ${e.code}
-//         </div>`;
+    keyed.innerHTML = 
+         `<div class="card">
+            <h3 class="title">e.key</h3>
+            ${e.key === ' ' ? 'space' : e.key}
+        </div>
+        <div class="card">
+            <h3 class="title">e.keyCode</h3>
+            ${e.keyCode}
+        </div>
+        <div class="card">
+            <h3 class="title">e.code</h3>
+            ${e.code}
+        </div>`;
     
-// });
+});
 
 
 
-// function onKey(e) {
-//     console.log(e.key);
-// }
+function onKey(e) {
+    console.log(e.key);
+}
 
-// keyed.addEventListener('key', onKey);
+keyed.addEventListener('key', onKey);
 
 
-// let intervalID;
+let intervalID;
 
-// function startChange(){
-//     if (!intervalID) {
-//         intervalID = setInterval(randomColorChange, 1000);
-//     }
+function startChange(){
+    if (!intervalID) {
+        intervalID = setInterval(randomColorChange, 1000);
+    }
     
-// }
+}
 
 
-// function randomColorChange() {
-//     const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-//     document.body.style.backgroundColor = `#${randomColor}`;
-// }
+function randomColorChange() {
+    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    document.body.style.backgroundColor = `#${randomColor}`;
+}
 
 
-// function colorChange (){
-//             if (document.body.style.backgroundColor !== 'black'){
-//                 document.body.style.backgroundColor = 'black'
-//             } else {
-//                 document.body.style.backgroundColor = 'white'
-//             }
+function colorChange (){
+            if (document.body.style.backgroundColor !== 'black'){
+                document.body.style.backgroundColor = 'black'
+            } else {
+                document.body.style.backgroundColor = 'white'
+            }
             
-// }
+}
 
-// function stopChange(){
-//     clearInterval(intervalID);
-// }
+function stopChange(){
+    clearInterval(intervalID);
+}
 
-// document.getElementById('start').addEventListener('click', startChange);
-// document.getElementById('stop').addEventListener('click', stopChange);
-
-
-// const xhr = new XMLHttpRequest();
-// xhr.open('GET', 'https://api.github.com/users/llsonkimm/repos');
+document.getElementById('start').addEventListener('click', startChange);
+document.getElementById('stop').addEventListener('click', stopChange);
 
 
-
-// xhr.onreadystatechange = function () {
-//     if (this.readyState === 4 && this.status === 200) {
-//         const data = JSON.parse(this.responseText);
-
-//         data.forEach(repo => {
-//             const li = document.createElement('li');
-//             li.innerHTML = `<strong>${repo.name} </strong> - ${repo.description}`;
-//             document.querySelector('#about').appendChild(li);
-//         });
-//     }
-// };
+const xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://api.github.com/users/llsonkimm/repos');
 
 
 
-// xhr.send();
+xhr.onreadystatechange = function () {
+    if (this.readyState === 4 && this.status === 200) {
+        const data = JSON.parse(this.responseText);
+
+        data.forEach(repo => {
+            const li = document.createElement('li');
+            li.innerHTML = `<strong>${repo.name} </strong> - ${repo.description}`;
+            document.querySelector('#about').appendChild(li);
+        });
+    }
+};
+
+
+
+xhr.send();
 
 const jokeGenerator = document.getElementById('jokes');
 const jokeBtn = document.getElementById('joke-btn');
