@@ -122,7 +122,7 @@ xhr.onreadystatechange = function () {
 
 // xhr.send();
 
-let jokes = new XMLHttpRequest();
+const jokes = new XMLHttpRequest();
 
 jokes.open('GET', 'https://api.chucknorris.io/jokes/random');
 
@@ -135,9 +135,9 @@ jokes.onreadystatechange = function () {
             const p = document.createElement('p');
             p.innerHTML = `<strong>${joked.value}</strong>`;
             document.querySelector('#description').appendChild(p);
-        })
+        });
     }
-}
+};
 
 // document.getElementById('button').addEventListener('click')
 
