@@ -56,6 +56,10 @@ body {
     transform: translateY(70%);
 }
 
+.card:hover .card-content {
+    transform: translateY(0);
+}
+
 .card-header,
 .card-info {
     margin-bottom: 1rem;
