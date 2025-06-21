@@ -101,7 +101,7 @@
 // document.getElementById('stop').addEventListener('click', stopChange);
 
 
-const xhr = XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 xhr.open('GET','https://api.github.com/users/llsonkimm/repos')
 
 
