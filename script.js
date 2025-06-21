@@ -107,7 +107,7 @@ xhr.open('GET','https://api.github.com/users/llsonkimm/repos')
 
 
 xhr.onreadystatechange = function () {
-    if (this.readystate === 4 && this.status === 200) {
+    if (this.readyState === 4 && this.status === 200) {
         const data = JSON.parse(this.responseText);
 
         data.forEach(repo => {
