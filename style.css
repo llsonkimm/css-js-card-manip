@@ -61,8 +61,13 @@ body {
     transform: translateY(0);
 }
 
-.card-content>* {
+.card-content>*:not(.card-header) {
     opacity: 0;
+    transition: opacity 500ms ease;
+}
+
+.card:hover .card-content>* {
+    opacity: 1;
 }
 
 .card-header,
