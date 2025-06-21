@@ -102,7 +102,7 @@
 
 
 const xhr = new XMLHttpRequest();
-xhr.open('GET','https://api.github.com/users/llsonkimm/repos')
+xhr.open('GET', 'https://api.github.com/users/llsonkimm/repos');
 
 
 
