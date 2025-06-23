@@ -93,7 +93,8 @@ a {
     transition: opacity 500ms linear;
 }
 
-.card:hover .card-content>*:not(.card-header) {
+.card:hover .card-content>*:not(.card-header),
+.card:focus-visible .card-content>*:not(.card-header) {
     opacity: 1;
     transition-delay: 1000ms;
 }
