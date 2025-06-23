@@ -26,13 +26,15 @@ body {
 .navbar ul {
     display: flex;
     list-style: none;
-    text-decoration: none;
+
 }
 
-.navbar ul li {
+.navbar ul li,
+a {
     color: #dedfd2;
     font-weight: bold;
     margin-left: 1rem;
+    text-decoration: none;
 }
 
 .card-header,
