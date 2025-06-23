@@ -114,7 +114,8 @@ a {
     transition: transform 1000ms ease;
 }
 
-.card:hover .card-header::after {
+.card:hover .card-header::after,
+.card:focus-within .card-header::after {
     transform: scaleX(1);
 }
 
