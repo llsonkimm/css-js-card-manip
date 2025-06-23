@@ -68,82 +68,82 @@
 // keyed.addEventListener('key', onKey);
 
 
-let intervalID;
+// let intervalID;
 
-function startChange(){
-    if (!intervalID) {
-        intervalID = setInterval(randomColorChange, 1000);
-    }
+// function startChange(){
+//     if (!intervalID) {
+//         intervalID = setInterval(randomColorChange, 1000);
+//     }
     
-}
+// }
 
 
-function randomColorChange() {
-    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-    document.body.style.backgroundColor = `#${randomColor}`;
-}
+// function randomColorChange() {
+//     const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+//     document.body.style.backgroundColor = `#${randomColor}`;
+// }
 
 
-function colorChange (){
-            if (document.body.style.backgroundColor !== 'rgb(4, 23, 36)'){
-                document.body.style.backgroundColor = 'rgb(4, 23, 36)'
-            } else {
-                document.body.style.backgroundColor = 'white'
-            }
+// function colorChange (){
+//             if (document.body.style.backgroundColor !== 'rgb(4, 23, 36)'){
+//                 document.body.style.backgroundColor = 'rgb(4, 23, 36)'
+//             } else {
+//                 document.body.style.backgroundColor = 'white'
+//             }
             
-}
+// }
 
-function stopChange(){
-    clearInterval(intervalID);
-}
+// function stopChange(){
+//     clearInterval(intervalID);
+// }
 
 // document.getElementById('start').addEventListener('click', startChange);
 // document.getElementById('stop').addEventListener('click', stopChange);
 
 
-const xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://api.github.com/users/llsonkimm/repos');
+// const xhr = new XMLHttpRequest();
+// xhr.open('GET', 'https://api.github.com/users/llsonkimm/repos');
 
 
 
-xhr.onreadystatechange = function () {
-    if (this.readyState === 4 && this.status === 200) {
-        const data = JSON.parse(this.responseText);
+// xhr.onreadystatechange = function () {
+//     if (this.readyState === 4 && this.status === 200) {
+//         const data = JSON.parse(this.responseText);
 
-        data.forEach(repo => {
-            const li = document.createElement('li');
-            li.innerHTML = `<strong>${repo.name} </strong> - ${repo.description}`;
-            document.querySelector('#about').appendChild(li);
-        });
-    }
-};
+//         data.forEach(repo => {
+//             const li = document.createElement('li');
+//             li.innerHTML = `<strong>${repo.name} </strong> - ${repo.description}`;
+//             document.querySelector('#about').appendChild(li);
+//         });
+//     }
+// };
 
 
 
-xhr.send();
+// xhr.send();
 
 // const jokeGenerator = document.getElementById('jokes');
 // const jokeBtn = document.getElementById('joke-btn');
 
-const generateJokes = () =>{
+// const generateJokes = () =>{
 
-    const xhr = new XMLHttpRequest();
+//     const xhr = new XMLHttpRequest();
 
-    xhr.open('GET', 'https://api.chucknorris.io/jokes/random');
+//     xhr.open('GET', 'https://api.chucknorris.io/jokes/random');
 
-    xhr.onreadystatechange = function () {
-        if (this.readyState === 4) {
-            if (this.status === 200) {
-                jokeGenerator.innerHTML = JSON.parse(this.responseText).value;
-            }
-        } else {
-            jokeGenerator.innerHTML = 'Something went wrong, refresh the page again'
-        }
-    }
+//     xhr.onreadystatechange = function () {
+//         if (this.readyState === 4) {
+//             if (this.status === 200) {
+//                 jokeGenerator.innerHTML = JSON.parse(this.responseText).value;
+//             }
+//         } else {
+//             jokeGenerator.innerHTML = 'Something went wrong, refresh the page again'
+//         }
+//     }
 
-    xhr.send();
+//     xhr.send();
 
-};
+// };
 
 
 
