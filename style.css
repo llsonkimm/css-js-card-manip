@@ -78,7 +78,8 @@ a {
     transition: transform 500ms ease;
 }
 
-.card:hover .card-content {
+.card:hover .card-content,
+.card:focus-visible .card-content {
     transform: translateY(0);
     transition-delay: 500ms;
 }
