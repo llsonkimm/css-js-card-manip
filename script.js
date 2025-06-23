@@ -122,8 +122,8 @@ xhr.onreadystatechange = function () {
 
 xhr.send();
 
-const jokeGenerator = document.getElementById('jokes');
-const jokeBtn = document.getElementById('joke-btn');
+// const jokeGenerator = document.getElementById('jokes');
+// const jokeBtn = document.getElementById('joke-btn');
 
 const generateJokes = () =>{
 
@@ -148,8 +148,8 @@ const generateJokes = () =>{
 
 
 
-jokeBtn.addEventListener('click', generateJokes);
-document.addEventListener('DOMContentLoaded', generateJokes);
+// jokeBtn.addEventListener('click', generateJokes);
+// document.addEventListener('DOMContentLoaded', generateJokes);
 // jokeBtn.addEventListener('click', generateJokes);
 
 
