@@ -167,20 +167,28 @@
 //             });
 // })
 
-fetch('http://httpstat.us/404')
-    .then((respose) => {
-        if (respose.status === 404){
-            throw new Error("Not Found");
-        } else if (respose.status === 500){
-            throw new Error("Server Error");
-        } else if (respose.status !== 200) {
-            throw new Error("Request Failed");
-        }
-        return respose
-        .then(() => {
-                console.log('succes');
-            })
-        .catch((error) => {
-                console.log(error);
-            });
-})
+// fetch('http://httpstat.us/404')
+//     .then((respose) => {
+//         if (respose.status === 404){
+//             throw new Error("Not Found");
+//         } else if (respose.status === 500){
+//             throw new Error("Server Error");
+//         } else if (respose.status !== 200) {
+//             throw new Error("Request Failed");
+//         }
+//         return respose
+//         .then(() => {
+//                 console.log('succes');
+//             })
+//         .catch((error) => {
+//                 console.log(error);
+//             });
+// })
+
+
+async function getUser() {
+    const res = await fetch ('https://jsonplaceholdertypicode.com/post');
+    const data = await res.JSON();
+}
+
+getUser();
