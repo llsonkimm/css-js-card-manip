@@ -153,7 +153,7 @@
 // jokeBtn.addEventListener('click', generateJokes);
 
 
-fetch('http://httpstat.us/200')
+fetch('http://hello123.com')
     .then((res) => {
         return res
             .then(() => {
