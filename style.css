@@ -91,7 +91,6 @@ a {
     width: calc(100% + var(--padding));
     height: 3px;
     background: #d6da06;
-    transform: scaleX(0);
     transform-origin: left;
     transition: transform 1000ms ease;
 }
@@ -144,6 +143,9 @@ a {
         transform: scaleX(1);
     }
 
+    .card-header::after {
+        transform: scaleX(0);
+    }
 }
 
 
