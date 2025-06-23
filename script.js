@@ -187,8 +187,8 @@
 
 
 async function getUser() {
-    const res = await fetch ('https://jsonplaceholdertypicode.com/post');
-    const data = await res.JSON();
-}
+    const res = await fetch('https://jsonplaceholdertypicode.com/post');
+    const data = await res.json();
+};
 
 getUser();
