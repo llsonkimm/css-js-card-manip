@@ -151,3 +151,5 @@ const generateJokes = () =>{
 jokeBtn.addEventListener('click', generateJokes);
 document.addEventListener('DOMContentLoaded', generateJokes);
 // jokeBtn.addEventListener('click', generateJokes);
+
+
