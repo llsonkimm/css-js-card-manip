@@ -194,3 +194,13 @@ async function getUsers() {
 };
 
 getUsers();
+
+
+// using arrow function
+
+const getPosts = async () => {
+    const res = await fetch('https://jsonplaceholder.typicode.com/post');
+    const data = await res.json();
+}
+
+getPosts();
