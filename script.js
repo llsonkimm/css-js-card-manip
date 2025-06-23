@@ -154,8 +154,8 @@
 
 
 fetch('http://httpstat.us/404')
-    .then((res) => {
-        return res
+    .then((respose) => {
+        return respose
             .then(() => {
                 console.log('succes');
             })
