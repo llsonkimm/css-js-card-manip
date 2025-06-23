@@ -155,6 +155,10 @@
 
 fetch('http://httpstat.us/404')
     .then((respose) => {
+        if (!respose.ok){
+            throw new Error("Request Failed");
+            
+        }
         return respose
             .then(() => {
                 console.log('succes');
