@@ -98,7 +98,7 @@ function stopChange(){
 }
 
 // document.getElementById('start').addEventListener('click', startChange);
-document.getElementById('stop').addEventListener('click', stopChange);
+// document.getElementById('stop').addEventListener('click', stopChange);
 
 
 const xhr = new XMLHttpRequest();
