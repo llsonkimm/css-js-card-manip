@@ -84,6 +84,10 @@ a {
     transition-delay: 500ms;
 }
 
+.card:focus-visible .card-content {
+    transition-duration: 0ms;
+}
+
 .card-content>*:not(.card-header) {
     opacity: 0;
     transition: opacity 500ms linear;
